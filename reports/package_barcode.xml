@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <report
+        id="package_barcode_parafusos"
+        string="Product packaging for Parafusos"
+        model="product.packaging"
+        report_type="qweb-pdf"
+        name="custom_package_barcode.report_package"
+        file="custom_package_barcode.report_package_barcode_parafusos"
+        print_report_name="'Location - %s' % object.name"/>
+    
+</odoo>
