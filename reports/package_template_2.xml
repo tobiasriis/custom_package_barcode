@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<odoo> 
+    <data>
+        <template id="report_package">
+            <t t-name="custom_package_barcode.report_package">
+                <t t-call="web.html_container">
+                  <t t-call="web.basic_layout">
+                      <t t-foreach="docs" t-as="o">
+                          <t call="web.external_layout">
+                              <div class="page">
+                                  <div class="row mt32 mb32" id="package_info">
+                                      <div class="col-auto mv-200 mb-2">
+                                          <div class="col-12 text-center" style="padding-top:170px;width:350px;">
+                                              <p t-field="o.product_id.name" style="font-size:25px;overflow-wrap:break-word;">
+                                              </p>
+                                          </div>
+                                  </div>
+                                  <div class="row mt32 mb32" id="package_info">
+                                      </div>
+                                      <div class="col-auto mv-200 mb-2">
+                                          <div class="col-12 text-center">
+                                              <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.name, 300, 100)" style="width:300;height:100" alt="Barcode"/>
+                                              <p t-field="o.barcode" style="font-size:25px;"/>
+                                              <strong>QUANTIDADE</strong>
+                                              <p t-field="o.qty" style="font-size:25px;">
+                                              </p>
+                                              <p t-field="o.product_id.uom_id" style="font-size:25px;">
+                                              </p>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </t>
+                      </t>
+                    </t>
+                </t>
+              </t>
+        </template>
+    </data>
+</odoo>
