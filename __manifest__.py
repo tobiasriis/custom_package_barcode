@@ -4,7 +4,7 @@
     'author': "Tobias Riis @ IT Brasil",
     'category': 'Uncategorized',
     'application': False,
-    'version': '0.1',
+    'version': '0.2',
     'website': 'http://itbrasil.com.br/',
     'data': [
         'reports/package_barcode.xml',
